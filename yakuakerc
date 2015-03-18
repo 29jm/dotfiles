@@ -1,0 +1,34 @@
+[$Version]
+update_info=yakuake.upd:2.9.9-startupnotification
+
+[Animation]
+Frames=0
+
+[Appearance]
+Skin=onepixeltitle
+
+[Colors]
+CurrentPalette=Forty Colors
+
+[Desktop Entry]
+DefaultProfile=Shell.profile
+
+[Dialogs]
+ConfirmQuit=false
+FirstRun=false
+
+[Favorite Profiles]
+Favorites=
+
+[KFileDialog Settings]
+Height 768=512
+Recent Files[$e]=142441-onepixeltitle.zip,$HOME/Téléchargements/onepixeltitle.tar,$HOME/Téléchargements/cnijfilter-source-3.40-1.tar.gz,$HOME/Téléchargements/142441-onepixeltitle.zip
+Recent URLs[$e]=$HOME/Téléchargements/,$HOME/Téléchargements/onepixeltitle/
+Width 1366=910
+
+[Shortcuts]
+options_configure_keybinding=Ctrl+Shift+O
+view-full-screen=F11
+
+[Window]
+Width=100
