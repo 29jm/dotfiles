@@ -17,6 +17,8 @@ export HISTCONTROL=ignoredups
 export EDITOR=vim
 export ANDROID_NDK_ROOT=/home/johan/Documents/Builds/android-ndk
 
+stty -ixon
+
 function changelog() {
 	git log | grep '^ *\(fix\|feat\|feature\):' | sed 's/^ *(fix|feat|feature):/- /'
 }
