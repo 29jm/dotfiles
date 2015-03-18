@@ -1,0 +1,6 @@
+OPTIONS=DECgraphics
+OPTIONS=suppress_alert:3.4.3
+OPTIONS=showexp
+OPTIONS=catname:Rex,dogname:Pirate
+OPTIONS=pickup_types:?!/$%
+OPTIONS=autodig,autoquiver

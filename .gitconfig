@@ -1,0 +1,11 @@
+[user]
+	email = johan.manuel@live.fr
+	name = Johan Manuel
+[push]
+	default = simple
+[credential]
+	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
+[commit]
+	template = /home/johan/.git-commit-template.txt
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
