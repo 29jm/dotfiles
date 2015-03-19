@@ -38,6 +38,7 @@ flags = [
 '-Wall',
 '-Wextra',
 '-Werror',
+'-Wno-unused-parameter',
 '-fexceptions',
 '-DNDEBUG',
 '-std=c++14',
