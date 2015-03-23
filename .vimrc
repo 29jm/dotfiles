@@ -9,6 +9,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'terryma/vim-expand-region'
 Plugin 'vim-scripts/gitignore'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tomtom/tcomment_vim'
 "Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
