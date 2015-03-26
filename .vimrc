@@ -41,6 +41,12 @@ nnoremap <Leader>z :w<CR>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" Map Control-Arrow keys to move by word
+map <ESC>[1;5D <C-Left>
+map <ESC>[1;5C <C-Right>
+map! <ESC>[1;5D <C-Left>
+map! <ESC>[1;5C <C-Right>
+
 if has("gui_running")
     inoremap <C-Space> <C-n>
 else
