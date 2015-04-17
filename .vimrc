@@ -10,7 +10,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'vim-scripts/gitignore'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'phildawes/racer'
 call vundle#end()
 
 filetype plugin indent on
@@ -26,6 +26,7 @@ set smartcase
 set showcmd
 set incsearch
 set whichwrap=<,>,[,],h,l
+set suffixes=.o,.swp,.bak,.png,.jpg
 
 set backupdir=~/.vim/tmp,~/tmp
 set dir=~/.vim,~/tmp
@@ -35,11 +36,19 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/ycm_extra_conf.py
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_enable_diagnostic_signs = 0
 
+let g:racer_cmd = "/home/johan/.vim/bundle/racer/target/release/racer"
+let $RUST_SRC_PATH="/home/johan/Documents/Builds/rust/src/"
+
 let mapleader = "\<Space>"
 
 nnoremap <Leader>z :w<CR>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+noremap  <C-w>h
+noremap  <C-w>l
+noremap  <C-w>k
+noremap  <C-w>j
 
 " Map Control-Arrow keys to move by word
 map <ESC>[1;5D <C-Left>
@@ -52,8 +61,6 @@ if has("gui_running")
 else
   if has("unix")
     inoremap <Nul> <C-n>
-  else
-  " I have no idea of the name of Ctrl-Space elsewhere
   endif
 endif
 
@@ -63,3 +70,4 @@ endif
 
 syntax on
 colorscheme industry
+hi Visual term=reverse cterm=reverse guibg=reverse
