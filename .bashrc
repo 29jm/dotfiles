@@ -25,4 +25,4 @@ function changelog() {
 
 [[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
 
-[ -z $TMUX ] && tmux
+[ -z $TMUX ] && tmux -2

@@ -27,6 +27,7 @@ set showcmd
 set incsearch
 set whichwrap=<,>,[,],h,l
 set suffixes=.o,.swp,.bak,.png,.jpg
+set laststatus=2
 
 set backupdir=~/.vim/tmp,~/tmp
 set dir=~/.vim,~/tmp
@@ -35,6 +36,8 @@ set directory=.vim/tmp,/tmp
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_enable_diagnostic_signs = 0
+
+let g:airline_powerline_fonts = 1
 
 let g:racer_cmd = "/home/johan/.vim/bundle/racer/target/release/racer"
 let $RUST_SRC_PATH="/home/johan/Documents/Builds/rust/src/"
@@ -56,6 +59,10 @@ map <ESC>[1;5C <C-Right>
 map! <ESC>[1;5D <C-Left>
 map! <ESC>[1;5C <C-Right>
 
+if !has('gui_running')
+  set t_Co=256
+endif
+
 if has("gui_running")
     inoremap <C-Space> <C-n>
 else
@@ -64,10 +71,10 @@ else
   endif
 endif
 
-if has('mouse')
-	set mouse=a
-endif
+" if has('mouse')
+" 	set mouse=a
+" endif
 
 syntax on
-colorscheme industry
-hi Visual term=reverse cterm=reverse guibg=reverse
+colorscheme ChocolatePapaya
+let g:airline_theme='powerlineish'
