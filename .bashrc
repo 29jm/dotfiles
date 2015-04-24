@@ -10,8 +10,8 @@ then
 	. .bash_aliases
 fi
 
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
 
 export HISTCONTROL=ignoredups
 export EDITOR=vim
@@ -25,4 +25,4 @@ function changelog() {
 
 [[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
 
-[ -z $TMUX ] && tmux -2
+[ -z $TMUX ] && tmux
