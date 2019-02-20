@@ -1,28 +1,24 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
+# if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -f .bash_aliases ]
-then
-	. .bash_aliases
-fi
+# Environment variables
+export PATH="$PATH:/home/johan/.cargo/bin"
+
+HISTCONTROL=ignoreboth
 
 PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
-alias ls='ls --color=auto'
 
-export HISTCONTROL=ignoreboth
-export EDITOR=vim
-export ANDROID_NDK_ROOT=/home/johan/Documents/Builds/android-ndk
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
-stty -ixon
-
-function changelog() {
-	git log | grep '^ *\(fix\|feat\|feature\):' | sed 's/^ *(fix|feat|feature):/- /'
-}
-
-[[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 [ -z $TMUX ] && tmux
