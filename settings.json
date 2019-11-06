@@ -1,0 +1,42 @@
+{
+    "telemetry.enableTelemetry": false,
+    "csharp.referencesCodeLens.enabled": false,
+    "vim.leader": " ",
+    "razor.disabled": true,
+    "window.zoomLevel": 0,
+    "explorer.confirmDelete": false,
+    "vim.useSystemClipboard": true,
+    "vim.whichwrap": "<,>,h,l",
+    "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "z"],
+      "commands": [":w"]
+    }],
+    "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<esc>"]
+    }
+  ],
+  "files.trimFinalNewlines": true,
+  "editor.minimap.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "multiCommand.commands": [
+      {
+          "command": "multiCommand.buildSOS",
+          "sequence": [
+              {"command": "workbench.action.terminal.sendSequence",
+                  "args": {"text": "make -j\u000D"}}
+          ]
+      },
+      {
+          "command": "multiCommand.runSOS",
+          "sequence": [
+              {"command": "workbench.action.terminal.sendSequence",
+                  "args": {"text": "make -j qemu\u000D"}}
+          ]
+      }
+],
+"workbench.colorTheme": "Monokai",
+"C_Cpp.updateChannel": "Insiders"
+}
