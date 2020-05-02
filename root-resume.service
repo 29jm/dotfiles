@@ -1,0 +1,10 @@
+[Unit]
+Description=Fix roccat mouse buttons on resume
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/usb_power.sh ROCCAT
+
+[Install]
+WantedBy=suspend.target
